@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 app.get("/subscribe", (req, res) => {
   res.send(`
     <html>
-      <body style="text-align:center; margin-top:50px;">
+      <body style="text-align:center; margin-top:50px; font-family:sans-serif;">
         <h2>✅ Subscription Successful</h2>
       </body>
     </html>
