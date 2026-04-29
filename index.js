@@ -1,3 +1,9 @@
+const express = require("express");
+const app = express();
+
+app.use(express.json());
+
+// Home route
 app.get("/", (req, res) => {
   res.send(`
     <html>
@@ -10,4 +16,21 @@ app.get("/", (req, res) => {
       </body>
     </html>
   `);
+});
+
+// Subscribe route
+app.get("/subscribe", (req, res) => {
+  res.send(`
+    <html>
+      <body style="text-align:center; margin-top:50px;">
+        <h2>✅ Subscription Successful</h2>
+      </body>
+    </html>
+  `);
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
 });
